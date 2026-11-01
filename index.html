@@ -1,6 +1,8 @@
-<html class="js backgroundsize borderimage csstransitions fontface svg" dir="ltr">
+<!-- added lang="en" to tell screen readers the language of the page, so they read it with correct pronunciation -->
+<html lang="en" class="js backgroundsize borderimage csstransitions fontface svg" dir="ltr">
 <head>
-	<title>Untitled</title>
+	<!-- added a clear title for the page, so screen reader users know which page and what site they are on -->
+	<title>Home | Hi/Max Real Estate</title>
 	<script src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_1_0/wet-boew/js/i18n/en.min.js"></script>
 	<script
 		src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_1_0/wet-boew/js/deps/jsonpointer.min.js"></script>
@@ -27,8 +29,9 @@
 
 <body>
 
-	</div>
-	<div> <!-- start of header-->
+		
+	<!-- changed the div to a header so screen reader users can find the banner landmark -->
+	<header> <!-- start of header-->
 
 				<div class="app-bar">
 			<div class="container">
@@ -41,12 +44,12 @@
 			</div>
 		</div>
 
-
-		<div id="wb-sm" data-ajax-replace="../ajax/cdtsMenu-en.html" data-trgt="mb-pnl"
+<!-- changed the div to a nav element and labeled it with the "Topics menu" heading, so screen readers announce it as "Topics menu navigation" -->
+		<nav id="wb-sm" aria-labelledby="topics-menu" data-ajax-replace="../ajax/cdtsMenu-en.html" data-trgt="mb-pnl"
 			class="wb-menu visible-md visible-lg wb-init wb-data-ajax-replace-inited wb-menu-inited wb-navcurr-inited"
 			typeof="SiteNavigationElement">
 			<div class="pnl-strt container nvbar">
-				<h2>Topics menu</h2>
+				<h2 id="topics-menu">Topics menu</h2>
 				<div class="row">
 					<ul role="menubar" class="list-inline menu">
 						<li><a class="item" href="index-en.html" tabindex="0" aria-posinset="1" aria-setsize="7"
@@ -64,9 +67,9 @@
 			</div>
 
 
-		</div> <!-- end of main navigation-->
+		</nav> <!-- end of main navigation-->
 
-	</div> <!-- end of header-->
+	</header> <!-- end of header-->
 
 	<main property="mainContentOfPage" class="container">
 		<h1>Welcome</h1>
@@ -105,21 +108,25 @@
 
 
 	</main>
-	<div id="wb-info" class=" wb-navcurr-inited">
+	<!-- changed the div to a footer element so screen readers can identify it as the contentinfo landmark -->
+	<footer id="wb-info" class=" wb-navcurr-inited">
 		<div class="gc-sub-footer">
 			<div class="container d-flex align-items-center">
 				<div>
 					<h3 class="wb-inv" id="aboutWebApp">Hi/Max Real Estate</h3>
+					<!-- added nav element with a unique aria-label "Footer", so screen readers can identify it as the footer navigation and distinguish it from the main navigation -->
+					<nav aria-label="Footer"> 
 					<ul>
 						<li><a href="#">About the company</a></li>
 						<li><a href="#">Privacy policy</a></li>
 						<li><a href="#">Accessibility statement</a></li>
 						<li style="list-style: none;" class="social">
-						<a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-						  <path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-48.9 158.8c.2 2.8.2 5.7.2 8.5 0 86.7-66 186.6-186.6 186.6-37.2 0-71.7-10.8-100.7-29.4 5.3.6 10.4.8 15.8.8 30.7 0 58.9-10.4 81.4-28-28.8-.6-53-19.5-61.3-45.5 10.1 1.5 19.2 1.5 29.6-1.2-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3a65.447 65.447 0 0 1-29.2-54.6c0-12.2 3.2-23.4 8.9-33.1 32.3 39.8 80.8 65.8 135.2 68.6-9.3-44.5 24-80.6 64-80.6 18.9 0 35.9 7.9 47.9 20.7 14.8-2.8 29-8.3 41.6-15.8-4.9 15.2-15.2 28-28.8 36.1 13.2-1.4 26-5.1 37.8-10.2-8.9 13.1-20.1 24.7-32.9 34z"></path>
-						</svg></a></li>
+						<!-- added aria-label and role="img", so screen readers can identify the Twitter link -->	 
+						<a href="#"><svg role="img" aria-label="Hi/Max Real Estate on Twitter" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+							<path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-48.9 158.8c.2 2.8.2 5.7.2 8.5 0 86.7-66 186.6-186.6 186.6-37.2 0-71.7-10.8-100.7-29.4 5.3.6 10.4.8 15.8.8 30.7 0 58.9-10.4 81.4-28-28.8-.6-53-19.5-61.3-45.5 10.1 1.5 19.2 1.5 29.6-1.2-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3a65.447 65.447 0 0 1-29.2-54.6c0-12.2 3.2-23.4 8.9-33.1 32.3 39.8 80.8 65.8 135.2 68.6-9.3-44.5 24-80.6 64-80.6 18.9 0 35.9 7.9 47.9 20.7 14.8-2.8 29-8.3 41.6-15.8-4.9 15.2-15.2 28-28.8 36.1 13.2-1.4 26-5.1 37.8-10.2-8.9 13.1-20.1 24.7-32.9 34z"></path>						</svg></a></li>
 						
-					  </ul>	
+					</ul>
+					</nav>	
 				</div>
 
 				<div class="col-xs-6 visible-sm visible-xs tofpg">
@@ -128,7 +135,7 @@
 
 			</div>
 		</div>
-	</div> <!-- end of footer-->
+	</footer> <!-- end of footer-->
 
 	<script>
 		var defFooter = document.getElementById("def-footer");
