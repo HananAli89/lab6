@@ -73,32 +73,102 @@
 
 	<main property="mainContentOfPage" class="container">
 		<h1>Welcome</h1>
-		<p>Content A here</p>
+		<!-- added the Hi/MAX Real Estate introduction and getting started link into a section with a clear heading, so screen reader users can jump to it with a keyboard shortcut -->
+		<section>
+  			<h2>Hi/Max Real Estate &amp; Houses</h2>
+  			<p>Buying or selling a home is likely the largest and most important transaction you'll ever make. That's why so many trust Hi/MAX Real Estate, which according to Canadian consumers, has been voted #1 Most Trusted Real Estate Agents in Canada six times in a row.</p>
+  			<p><a href="#">Lets get started</a></p>
+		</section>
 		<div class="row">
 			<div class="col-md-4 pull-right">
-				<p></p>Content B here
+				<!-- added an aside element labelled by its heading, so screen reader users hear it as the "Related resources" complementary landmark -->
+				<aside aria-labelledby="related-resources">
+					<h2 id="related-resources">Related resources</h2>
+					<p>It's time to sell and find the next "one". Let us help you navigate the ins &amp; outs of your next move.</p>
+					<ul>
+						<li><a href="#">Looking for an upgrade?</a></li>
+						<li><a href="#">Buying tips</a></li>
+						<li><a href="#">How much is your current home worth?</a></li>
+					</ul>
+				</aside>
 			</div>
 			<div class="col-md-8">
-				<p>Content C here</p>
+				<!-- added a section element with a clear heading, so screen reader users can jump to it with a keyboard shortcut -->
+				<section>
+					<h2>Why choosing HI/Max</h2>
+					<p>Hi/Max agents go above and beyond and always strive to be the best they can be. HI/MAX is extremely community focused, and our agents are too!</p>
+					<!-- added a table with a caption and used id and headers attributes, so screen readers announce the matching headers with each value -->
+					<table class="table table-bordered"> <!-- added table styling to add padding between cells and table-bordered to add borders around each cell-->
+						<caption>Stats of HI/Max</caption>
+						<thead>
+						<tr>
+							<th id="year" rowspan="2">Year</th>
+							<th id="sold" colspan="2">Sold Properties</th>
+							<th id="price" colspan="2">Average selling price</th>
+						</tr>
+						<tr>
+							<th id="quebec" headers="sold">Quebec</th>
+							<th id="ontario" headers="sold">Ontario</th>
+							<th id="single" headers="price">Single house</th>
+							<th id="condo" headers="price">Condo</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<th id="y2021" headers="year">2021</th>
+							<td headers="y2021 sold quebec">50</td>
+							<td headers="y2021 sold ontario">100</td>
+							<td headers="y2021 price single">$500,00</td>
+							<td headers="y2021 price condo">189,000</td>
+						</tr>
+						<tr>
+							<th id="y2022" headers="year">2022</th>
+							<td headers="y2022 sold quebec">100</td>
+							<td headers="y2022 sold ontario">200</td>
+							<td headers="y2022 price single">$780,00</td>
+							<td headers="y2022 price condo">240,000</td>
+						</tr>
+						</tbody>
+					</table>
+				</section>
 
 
 			</div>
 		</div>
 		<div class="clear"></div>
-		<div>Content D here</div>
+		<!-- added a section element that groups related content with a clear heading, so screen reader users can jump to it with a keyboard shortcut -->
+		<section>
+  			<h2>More Resources on How to Choose the Right Agent</h2>
 		<div class="row">
 			<div class="col-md-4 ">
-				<p>Content F here</p>
+				<!-- added an article element to group the content for each resource and added alt attribute for the images, so screen reader users can understand what each image shows-->
+				<!-- added hidden text for the "Read more" link, so screen reader users can understand the link's purpose -->
+
+				<article>
+  					<img src="1.png" alt="Red birdhouse with a For Sale sign hanging from a tree branch">
+ 					<h3><a href="#">What Are The Risks of Selling a Home Yourself?</a></h3>
+  					<p>We've all seen the videos, read the stories, and gasped at the images of people who thought they could conquer a project that would have been better left to the professionals.</p>
+  					<p><a href="#">Read more<span class="wb-inv"> about the risks of selling a home yourself</span></a></p>
+				</article>
 			</div>
 			<div class="col-md-4">
-				<p>Content G here</p>
+				<article>
+  					<img src="2.png" alt="Real estate agent smiling while meeting with a client at a desk">
+  					<h3><a href="#">7 Questions to Ask a Real Estate Agent Before You Commit</a></h3>
+  					<p>According to research by the National Association of Realtors, there are considerable benefits to working with a real estate agent, including higher sale prices.</p>
+  				</article>
 
 			</div>
 			<div class="col-md-4">
-				<p>Content H here</p>
+				<article>
+  					<img src="3.png" alt="Real estate agent placing a For Sale sign in front of a house">
+  					<h3><a href="#">8 Reasons to Hire an Agent When Selling Your Home</a></h3>
+  					<p>With all the many different moving parts involved in selling your home, here are eight very valid reasons to have a real estate agent on speed dial.</p>
+				</article>
 
 			</div>
 		</div>
+		</section>
 		<div class="pagedetails">
 			<dl id="wb-dtmd">
 				<dt>Date modified: </dt>
